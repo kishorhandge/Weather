@@ -1,0 +1,160 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #222;
+    transition: background 0.5s ease-in-out; /* Smooth transition */
+}
+
+/* 🌄 Dynamic Backgrounds Based on Weather */
+.clear {
+    background: linear-gradient(to top, #fceabb, #f8b500); /* Sunny */
+}
+
+.clouds {
+    background: linear-gradient(to top, #bdc3c7, #2c3e50); /* Cloudy */
+}
+
+.rain {
+    background: linear-gradient(to top, #4b79a1, #283e51); /* Rainy */
+}
+
+.mist {
+    background: linear-gradient(to top, #606c88, #3f4c6b); /* Misty */
+}
+
+.drizzle {
+    background: linear-gradient(to top, #89f7fe, #66a6ff); /* Light Rain */
+}
+
+/* ✨ Glassmorphism Design */
+.card {
+    width: 90%;
+    max-width: 470px;
+    background: rgba(255, 255, 255, 0.1); /* Transparent */
+    backdrop-filter: blur(10px); /* Glass effect */
+    color: #fff;
+    margin: 100px auto 0px;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.2);
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search input {
+    border: 0px;
+    outline: 0px;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+    border-radius: 30px; /* Rounded input */
+}
+
+.search button {
+    border: 0px;
+    outline: 0px;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    cursor: pointer;
+    height: 60px;
+    transition: 0.3s ease-in-out;
+}
+
+.search button:hover {
+    transform: scale(1.1); /* Button hover effect */
+}
+
+.search button img {
+    width: 16px;
+}
+
+.weather-icon {
+    width: 170px;
+    margin-top: 30px;
+}
+
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.weather h2 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.col img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.humidity, .wind {
+    font-size: 28px;
+    margin-top: -6px;
+}
+
+.weather {
+    display: none;
+}
+
+/* ❌ Error Message */
+.error {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+
+/* ⏳ Loading Animation */
+.loading {
+    display: none; /* Hidden by default */
+    margin: 20px auto;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+/* 🔄 Keyframes for spinning effect */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
